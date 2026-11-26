@@ -18,16 +18,20 @@ navLinks.querySelectorAll("a").forEach((link) => {
 
 document.querySelector("#year").textContent = new Date().getFullYear();
 
-document.querySelector("#contact-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  if (!form.reportValidity()) return;
+const contactForm = document.querySelector("#contact-form");
 
-  const details = new FormData(form);
-  const subject = encodeURIComponent(`Project enquiry from ${details.get("name")}`);
-  const body = encodeURIComponent(
-    `Name: ${details.get("name")}\nEmail: ${details.get("email")}\nService: ${details.get("service")}\n\n${details.get("message")}`,
-  );
-  document.querySelector("#form-status").textContent = "Your email app will open with your project details ready to send.";
-  window.location.href = `mailto:hello@salonedigital.com?subject=${subject}&body=${body}`;
-});
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    if (!form.reportValidity()) return;
+
+    const details = new FormData(form);
+    const subject = encodeURIComponent(`Project enquiry from ${details.get("name")}`);
+    const body = encodeURIComponent(
+      `Name: ${details.get("name")}\nEmail: ${details.get("email")}\nService: ${details.get("service")}\n\n${details.get("message")}`,
+    );
+    document.querySelector("#form-status").textContent = "Your email app will open with your project details ready to send.";
+    window.location.href = `mailto:hello@salonedigital.com?subject=${subject}&body=${body}`;
+  });
+}

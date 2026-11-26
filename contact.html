@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Contact Salone Digital Solutions to talk about a website, custom software, or digital strategy project." />
+    <meta name="theme-color" content="#101a30" />
+    <title>Contact — Salone Digital Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="index.html#top" aria-label="Salone Digital Solutions home">
+          <span class="brand-mark" aria-hidden="true">S<span>.</span></span><span class="brand-name">salone<span>digital</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span></button>
+        <div class="nav-links" id="nav-links">
+          <a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">About</a><a href="index.html#work">Our approach</a><a class="nav-cta" href="contact.html" aria-current="page">Contact us <span aria-hidden="true">↗</span></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="contact contact-page section-pad">
+        <div class="container contact-grid">
+          <div class="contact-copy">
+            <p class="eyebrow">YOUR NEXT STEP STARTS HERE</p>
+            <h1>Let’s make<br />something <span>happen.</span></h1>
+            <p>Have an idea, a challenge, or just a question? Tell us a little about it. We’d love to hear from you.</p>
+            <div class="contact-detail"><span class="contact-detail-icon" aria-hidden="true">✳</span><span><small>BASED IN</small><strong>Freetown, Sierra Leone</strong></span></div>
+            <div class="contact-detail"><span class="contact-detail-icon" aria-hidden="true">↗</span><span><small>EMAIL US</small><a href="mailto:hello@salonedigital.com"><strong>hello@salonedigital.com</strong></a></span></div>
+          </div>
+          <form class="contact-form" id="contact-form">
+            <div class="form-heading"><strong>Tell us what’s on your mind.</strong><span>We’ll get back to you soon.</span></div>
+            <label for="name">Your name</label><input id="name" name="name" type="text" placeholder="e.g. Aminata Kamara" autocomplete="name" required />
+            <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@yourbusiness.com" autocomplete="email" required />
+            <label for="service">What can we help with?</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Choose a service</option>
+              <option>Website design &amp; development</option><option>Custom software</option><option>Digital strategy</option><option>Something else</option>
+            </select>
+            <label for="message">A little about your project</label><textarea id="message" name="message" rows="3" placeholder="What are you hoping to make possible?" required></textarea>
+            <button class="button button-lime form-submit" type="submit">Start the conversation <span aria-hidden="true">↗</span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-main">
+        <a class="brand footer-brand" href="index.html#top"><span class="brand-mark">S<span>.</span></span><span class="brand-name">salone<span>digital</span></span></a>
+        <p>Thoughtful digital solutions.<br />Rooted in Salone. Ready for what’s next.</p>
+        <a class="footer-top" href="#top">Back to top <span>↑</span></a>
+      </div>
+      <div class="container footer-bottom"><span>© <span id="year"></span> Salone Digital Solutions</span><span>Made with purpose in Sierra Leone <span class="footer-heart">♥</span></span></div>
+    </footer>
+  </body>
+</html>
